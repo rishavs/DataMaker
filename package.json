@@ -1,0 +1,13 @@
+{
+	"name": "data_maker",
+	"version": "1.0.0",
+	"description": "sample data maker",
+	"main": "app.js",
+	"author": "Rishav Sharan",
+	"license": "MIT",
+	"dependencies": { 
+		"restler":"latest",
+		"request":"latest"
+	}
+
+}
