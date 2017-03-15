@@ -2,51 +2,51 @@
     {
         "name": "Rosemarie Macias",
         "gender": "female",
-        "mail": "rosemariemacias@zilphur.com"
+        "email": "rosemariemacias@zilphur.com"
     },
     {
         "name": "Evangeline Oneill",
         "gender": "female",
-        "mail": "evangelineoneill@zilphur.com"
+        "email": "evangelineoneill@zilphur.com"
     },
     {
         "name": "Edwina Tanner",
         "gender": "female",
-        "mail": "edwinatanner@zilphur.com"
+        "email": "edwinatanner@zilphur.com"
     },
     {
         "name": "Carmela Mcclure",
-        "gender": "female",
-        "mail": "carmelamcclure@zilphur.com"
+        "gender": "other",
+        "email": "carmelamcclure@zilphur.com"
     },
     {
         "name": "Maryanne Mayer",
         "gender": "female",
-        "mail": "maryannemayer@zilphur.com"
+        "email": "maryannemayer@zilphur.com"
     },
     {
         "name": "Snider Dominguez",
         "gender": "male",
-        "mail": "sniderdominguez@zilphur.com"
+        "email": "sniderdominguez@zilphur.com"
     },
     {
         "name": "Vargas Harrison",
         "gender": "male",
-        "mail": "vargasharrison@zilphur.com"
+        "email": "vargasharrison@zilphur.com"
     },
     {
         "name": "Johnnie Cooper",
-        "gender": "female",
-        "mail": "johnniecooper@zilphur.com"
+        "gender": "other",
+        "email": "johnniecooper@zilphur.com"
     },
     {
         "name": "Taylor Cooley",
         "gender": "male",
-        "mail": "taylorcooley@zilphur.com"
+        "email": "taylorcooley@zilphur.com"
     },
     {
         "name": "Curry Arnold",
         "gender": "male",
-        "mail": "curryarnold@zilphur.com"
+        "email": "curryarnold@zilphur.com"
     }
 ]

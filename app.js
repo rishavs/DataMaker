@@ -14,11 +14,12 @@ var st = new Date();
 // Turn the list into Promises that resolve once the request returns.
 var promises = list.map(function (item) {
     return new Promise(function (resolve, reject) {
+    	// console.log(item)
         //Lets configure and request
         request({
             url: 'http://localhost:4000/api/posts',
             method: 'POST',
-            json: { 'post' : item}
+            json: { "post" : item}
         }, function(error, response, body) {
             total_count = total_count + 1
 
@@ -26,10 +27,15 @@ var promises = list.map(function (item) {
                 console.log(error);
                 fail_count = fail_count + 1
             } else {
-                // console.log(response.statusCode, body);
-                var dt = new Date();
-                // console.log('Successfully posted in: ' + (dt - st) + " milliseconds."  );
-                pass_count = pass_count + 1
+
+            	if (response.statusCode == 201) {
+	                var dt = new Date();
+	                pass_count = pass_count + 1
+            	}
+            	else {
+  		            console.log(response.statusCode);
+                    fail_count = fail_count + 1
+            	}
             }
             resolve();
         }); // End of request
@@ -39,9 +45,9 @@ var promises = list.map(function (item) {
 Promise.all(promises) // When all these promsies have resolved() call the .then
     .then(function () {
         console.log('=========================================');
-        console.log('Total : ' + total_count);
-        console.log('Pass : ' + pass_count);
-        console.log('Fail : ' + fail_count);
+        console.log('Total 	: ' + total_count);
+        console.log('Pass 	: ' + pass_count);
+        console.log('Fail 	: ' + fail_count);
         console.log('=========================================');
         var et = new Date();
 		console.log("Total Time Taken 	= " + (et - st)/1000 + " seconds.")
