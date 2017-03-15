@@ -1,9 +1,9 @@
 var request = require('request');
 
-// posts = require('./posts.json');
+posts = require('./posts.json');
 users = require('./users.json');
 
-list = users
+list = posts
 
 var total_count = 0
 var pass_count = 0
@@ -16,9 +16,9 @@ var promises = list.map(function (item) {
     return new Promise(function (resolve, reject) {
         //Lets configure and request
         request({
-            url: 'http://localhost:4000/api/users',
+            url: 'http://localhost:4000/api/posts',
             method: 'POST',
-            json: { 'user' : item}
+            json: { 'post' : item}
         }, function(error, response, body) {
             total_count = total_count + 1
 
@@ -28,7 +28,7 @@ var promises = list.map(function (item) {
             } else {
                 // console.log(response.statusCode, body);
                 var dt = new Date();
-                console.log('Successfully posted in: ' + (dt - st) + " milliseconds."  );
+                // console.log('Successfully posted in: ' + (dt - st) + " milliseconds."  );
                 pass_count = pass_count + 1
             }
             resolve();
